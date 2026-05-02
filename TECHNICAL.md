@@ -171,9 +171,11 @@ The header row has no spaces after commas. `csv.DictReader` reads keys as `"Capt
 - Name matching assumes consistent spelling across sessions. "Kabir" and "Kabeer" accumulate separate histories. This is a user discipline issue, not something the program enforces.
 - No CSV editing via the program — intentional design choice to prevent accidental history corruption. Manual CSV edits remain the only option.
 - GK captaincy requires at least two GKs. With one GK, the program silently falls back to outfield-only selection.
+- Weights are based on captaincy count across all logged sessions, not appearances. Players who attend less frequently accumulate captaincy count slower, making them appear overdue when they may not be relative to their actual attendance. Fixing this would require tracking attendance per session — currently not logged.
 
 **Improvements worth considering:**
 
+- Building a front end for this to make execution easier
 - A `--dry-run` flag that shows weighted probabilities and the eligible pool without actually picking, useful for verifying fairness before a session.
 - A configurable rolling block window (e.g., block the last N sessions instead of just one).
 - A `--stats` flag to print full captaincy history tallied from the CSV without running a session.

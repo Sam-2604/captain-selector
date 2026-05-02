@@ -100,6 +100,7 @@ A weighted random algorithm with persistent state is the only real fix.
 - Name matching is case-insensitive but assumes consistent spelling across sessions. "Kabir" and "Kabeer" are treated as different players.
 - No way to edit or delete logged sessions without manually editing the CSV — intentional, to prevent accidental history corruption.
 - The consecutive session block only looks at the immediately preceding session, not a rolling window.
+- Weights are based on captaincy count across all logged sessions, not appearances. Players who attend less frequently accumulate captaincy count slower, making them appear overdue when they may not be relative to their actual attendance. Fixing this would require tracking attendance per session — currently not logged.
 
 ## Author
 
