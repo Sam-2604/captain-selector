@@ -1,6 +1,8 @@
 # Captain Selector
 Randomly picks two football captains with weighted fairness based on past selection history.
 
+Video Demo: <https://youtu.be/eCisWoYp2mw>
+
 ## Description
 
 Every Sunday, a group of friends plays football and splits into two teams by having two captains pick players. The selection should feel fair — ideally, everyone gets a turn as captain roughly equally over time. The obvious solution of asking an LLM to "pick randomly" turned out to produce biased results, with the same names appearing repeatedly.
